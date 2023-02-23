@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-color: #181818;
+	color: white;
+	width: 100%;
+}
+
+.button {
+	@apply py-2 px-6 transition-colors;
+
+	&.primary,
+	&.secondary,
+	&.tertiary {
+		@apply text-white font-mono uppercase tracking-widest;
+	}
+
+	&.primary {
+		@apply bg-primary hover:opacity-90;
+	}
+
+	&.secondary {
+		@apply bg-transparent border border-white hover:bg-white hover:text-black;
+	}
+
+	&.tertiary {
+		@apply bg-red-500;
+	}
+}
+
+.rich-text {
+	@apply space-y-2;
+	h1 {
+		@apply text-4xl font-bold;
+	}
+
+	h2 {
+		@apply text-3xl font-bold;
+	}
+
+	h3 {
+		@apply text-2xl font-bold;
+	}
+
+	h4 {
+		@apply text-xl font-bold;
+	}
+
+	h5 {
+		@apply text-lg font-bold;
+	}
+
+	h6 {
+		@apply text-base font-bold;
+	}
+}
