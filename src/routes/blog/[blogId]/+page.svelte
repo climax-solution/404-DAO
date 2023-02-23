@@ -1,17 +1,12 @@
 <script lang="ts">
 	import type { Post } from '$lib/payload-types';
-	import AOS from 'aos';
 	import BlockRenderer from 'components/BlockRenderer.svelte';
-	import { onMount } from 'svelte/types/runtime/internal/lifecycle';
 	import type { PageData } from './$types';
 	export let data: PageData;
 
 	let post = data.post;
 
 	const bannerUrl = (post.bannerImage as { url: string }).url;
-	onMount(() => {
-        AOS.refresh();
-	})
 </script>
 
 <header
